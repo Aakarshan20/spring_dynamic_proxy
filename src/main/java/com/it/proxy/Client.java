@@ -34,7 +34,7 @@ public class Client {
          *          讓我們寫如何代理 通常都是寫一個該接口的實現類 通常情況下都是匿名 但是不必須
          *          此接口的實現類都是誰用 誰寫
        */
-        Producer proxyProducer =(Producer) Proxy.newProxyInstance(producer.getClass().getClassLoader(), producer.getClass().getInterfaces(),
+        IProducer proxyProducer =(IProducer) Proxy.newProxyInstance(producer.getClass().getClassLoader(), producer.getClass().getInterfaces(),
                 new InvocationHandler() {
                     /**
                      * 作用: 執行被代理對象的任何接口方法都會經過該方法
